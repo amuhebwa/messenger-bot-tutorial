@@ -113,7 +113,7 @@ Messenger bots uses a web server to process messages it receives or to figure ou
 
 4. Refresh your Heroku app and you will see the messages that are logged to the console.
 
-5. Copy the index.js.v2 code into index.js and re-deploy.
+5. Copy the index.js.v2 code into index.js, change the code to use your own TOKEN, and re-deploy.
 
 4. Refresh your Heroku app to verify that it still works correctly.
 

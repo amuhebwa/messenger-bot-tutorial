@@ -30,7 +30,7 @@ app.get('/webhook', function (req, res)
     if (req.query['hub.mode'] === 'subscribe')
     {
         console.log("Subscribe Verify Token, check: " + req.query['hub.verify_token']);
-        if (req.query['hub.verify_token'] === 'CMUR_Bot2017')
+        if (req.query['hub.verify_token'] === 'YOUR_TOKEN')
         {
             console.log("Validating webhook");
             res.send(req.query['hub.challenge'])

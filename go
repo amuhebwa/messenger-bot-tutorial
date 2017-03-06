@@ -1,4 +1,4 @@
 git pull origin master
 git add .
-git commit -m "added run basic server in Heroku"
+git commit -m "Added code to validation webhook"
 git push origin master
