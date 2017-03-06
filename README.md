@@ -14,8 +14,6 @@ So instead here is how to create your own messenger bot in 15 minutes.
 
 Messenger bots uses a web server to process messages it receives or to figure out what messages to send. You also need to have the bot be authenticated to speak with the web server and the bot approved by Facebook to speak with the public.
 
-You can also skip the whole thing by git cloning this repository, running npm install, and run a server somewhere.
-
 ### *Build the server*
 
 1. Install the Heroku toolbelt from here https://toolbelt.heroku.com to launch, stop and monitor instances. Sign up for free at https://www.heroku.com if you don't have an account yet.
@@ -95,15 +93,9 @@ You can also skip the whole thing by git cloning this repository, running npm in
 
 1. Create or configure a Facebook App or Page here https://developers.facebook.com/apps/
 
-    ![Alt text](/demo/shot1.jpg)
+2. In the app go to Messenger tab then click Setup Webhook. Here you will put in the URL of your Heroku server and a token.  Go ahead and check all the subscription fields.  Be sure to add /webhook to the end of your Server URI.
 
-2. In the app go to Messenger tab then click Setup Webhook. Here you will put in the URL of your Heroku server and a token. Make sure to check all the subscription fields. 
-
-    ![Alt text](/demo/shot3.jpg)
-
-3. Get a Page Access Token and save this somewhere. 
-
-    ![Alt text](/demo/shot2.jpg)
+3. Get a Page Access Token and save this somewhere. We will use it in 2 places - once for setting up access to the Facebook API for your Bot and once trigger the Facebook app to send messages to the Bot.
 
 4. Go back to Terminal and type in this command to trigger the Facebook app to send messages. Remember to use the token you requested earlier.
 
