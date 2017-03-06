@@ -2,6 +2,8 @@
 
 ![Alt text](/demo/Demo.gif)
 
+This tutorial is based on one from  2016 Jerry Wang (https://jw84.co) (c) 2106.
+
 Facebook recently opened up their Messenger platform to enable bots to converse with users through Facebook Apps and on Facebook Pages. 
 
 You can read the  [documentation](https://developers.facebook.com/docs/messenger-platform/quickstart) the Messenger team prepared but it's not very clear for beginners and intermediate hackers. 
