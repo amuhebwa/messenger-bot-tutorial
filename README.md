@@ -14,11 +14,11 @@ So instead here is how to create your own messenger bot in 15 minutes.
 
 Messenger bots uses a web server to process messages it receives or to figure out what messages to send. You also need to have the bot be authenticated to speak with the web server and the bot approved by Facebook to speak with the public.
 
-### *Before the Bot Party: Build the server*
+### *Before the Bot Party: Build the Server*
 
-1. Make sure you have access to a Linux-flavor command.line.
+1. Make sure you have access to a Linux-flavor command line.
 
-2. Install the Heroku toolbelt from here https://toolbelt.heroku.com to launch, stop and monitor instances. Sign up for free at https://www.heroku.com if you don't have an account yet.
+2. Install the Heroku toolbelt from here https://toolbelt.heroku.com - this lets you launch, stop and monitor instances. Sign up for free at https://www.heroku.com if you don't have an account yet.
 
 3. Install Node from here https://nodejs.org, this will be the server environment. Then open up Terminal or Command Line Prompt and make sure you've got the very most recent version of npm by installing it again:
 
@@ -26,7 +26,7 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     sudo npm install npm -g
     ```
 
-4. Create a new folder somewhere where you will create a new Node project. cd to this directory and run the following command; hit Enter to accept the defaults.
+4. Create a new folder somewhere where you will create a new Node project. cd to this directory and run the following command; you may hit Enter to accept the defaults.
 
     ```
     npm init
@@ -38,7 +38,7 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     npm install express request body-parser --save
     ```
 
-6. Create an index.js file in the folder and copy this code into it. We will start by creating a basic Node.js server app and later add the code to authenticate the Facebook Messenger Bot.
+6. Create an index.js file in the folder and copy the following code into it. For this step, you will start by creating a basic Node.js server app. Later we will add the code to authenticate the Facebook Messenger Bot.
 
     ```javascript
     'use strict'
@@ -69,7 +69,7 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     })
     ```
 
-6. Make a file called Procfile and copy this. This is so Heroku can know what file to run.
+6. Make a file called Procfile and copy this into it. This is so Heroku can know what file to run.
 
     ```
     web: node index.js
@@ -86,6 +86,16 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     ```
 8. You should be able to "open your app" in Heroku to run it and see the hello world message.
 
+9. If you want to change your server code, re-deploy it with the following commands (put your own comments in for the commit):
+
+
+    ```
+    git add . 
+    git commit --message "Your comment"
+    git push heroku master
+    ```
+
+ 
 ## 🙌  We will start our Bot Party by going through the rest of these steps together.
 
 ### *Setup the Facebook App*
