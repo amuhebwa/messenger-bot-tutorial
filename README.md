@@ -111,7 +111,7 @@ Messenger bots uses a web server to process messages it receives or to figure ou
 
 4. Refresh your Heroku app and you will see the messages that are logged to the console.
 
-5. Copy the index.js.v2 code into index.js, change the code to use your own TOKEN, and re-deploy.
+5. Copy the index.js.v2 code into index.js, change the code to use your own token instead of YOUR_TOKEN, and re-deploy.
 
 4. Refresh your Heroku app to verify that it still works correctly.
 
@@ -120,10 +120,8 @@ Messenger bots uses a web server to process messages it receives or to figure ou
 1. Create or configure a Facebook App or Page here https://developers.facebook.com/apps/
 
 2. In the app go to Messenger tab then click Setup Webhook.  First, put in put in the URI of your Heroku server.  Be sure to add /webhook to the end of your Server URI.
-
-Go ahead and check all the subscription fields. 
-
-Start with "xyz" for your token, see that it fails, and watch your Heroku log.  Then put in the YOUR_TOKEN you used in your index.js code. Verify and Save.
+- Go ahead and check all the subscription fields. 
+- Start with "xyz" for your token, see that it fails, and watch your Heroku log.  Then put in the YOUR_TOKEN you used in your index.js code. Verify and Save.
 
 3. Get a Page Access Token and save this somewhere. We will use it in 2 places - once later for setting up access to the Facebook API for your Bot and once now to trigger the Facebook app to send messages to the Bot.
 
