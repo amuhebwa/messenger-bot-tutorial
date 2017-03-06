@@ -10,7 +10,7 @@ You can read the  [documentation](https://developers.facebook.com/docs/messenger
 
 So instead here is how to create your own messenger bot in 15 minutes.
 
-## 🙌 Get set
+## 🙌 Pre-Party, Get Set
 
 Messenger bots uses a web server to process messages it receives or to figure out what messages to send. You also need to have the bot be authenticated to speak with the web server and the bot approved by Facebook to speak with the public.
 
@@ -38,7 +38,7 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     npm install express request body-parser --save
     ```
 
-6. Create an index.js file in the folder and copy this into it. We will start by authenticating the bot.
+6. Create an index.js file in the folder and copy this code into it. We will start by creating a basic Node.js server app and later add the code to authenticate the Facebook Messenger Bot.
 
     ```javascript
     'use strict'
@@ -62,7 +62,6 @@ Messenger bots uses a web server to process messages it receives or to figure ou
         res.send('Hello World, I would like to be a chat bot')
     })
 
-
     // Spin up the server
     app.listen(app.get('port'), function()
     {   
@@ -85,6 +84,9 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     heroku create
     git push heroku master
     ```
+8. You should be able to "open your app" in Heroku to run it and see the hello world message.
+
+## 🙌  We will start our Bot Party by going through the rest of these steps together.
 
 ### *Setup the Facebook App*
 
