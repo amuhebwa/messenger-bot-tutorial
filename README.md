@@ -14,33 +14,35 @@ So instead here is how to create your own messenger bot in 15 minutes.
 
 Messenger bots uses a web server to process messages it receives or to figure out what messages to send. You also need to have the bot be authenticated to speak with the web server and the bot approved by Facebook to speak with the public.
 
-### *Build the server*
+### *Before the Bot Party: Build the server*
 
-1. Install the Heroku toolbelt from here https://toolbelt.heroku.com to launch, stop and monitor instances. Sign up for free at https://www.heroku.com if you don't have an account yet.
+1. Make sure you have access to a Linux-flavor command.line.
 
-2. Install Node from here https://nodejs.org, this will be the server environment. Then open up Terminal or Command Line Prompt and make sure you've got the very most recent version of npm by installing it again:
+2. Install the Heroku toolbelt from here https://toolbelt.heroku.com to launch, stop and monitor instances. Sign up for free at https://www.heroku.com if you don't have an account yet.
+
+3. Install Node from here https://nodejs.org, this will be the server environment. Then open up Terminal or Command Line Prompt and make sure you've got the very most recent version of npm by installing it again:
 
     ```
     sudo npm install npm -g
     ```
 
-3. Create a new folder somewhere and let's create a new Node project. Hit Enter to accept the defaults.
+4. Create a new folder somewhere where you will create a new Node project. cd to this directory and run the following command; hit Enter to accept the defaults.
 
     ```
     npm init
     ```
 
-4. Install the additional Node dependencies. Express is for the server, request is for sending out messages and body-parser is to process messages.
+5. Install the additional Node dependencies. Express is for the server, request is for sending out messages and body-parser is to process messages.
 
     ```
     npm install express request body-parser --save
     ```
 
-5. Create an index.js file in the folder and copy this into it. We will start by authenticating the bot.
+6. Create an index.js file in the folder and copy this into it. We will start by authenticating the bot.
 
     ```javascript
     'use strict'
-    
+
     const express = require('express')
     const bodyParser = require('body-parser')
     const request = require('request')
@@ -54,22 +56,17 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     // Process application/json
     app.use(bodyParser.json())
 
-    // Index route
-    app.get('/', function (req, res) {
-    	res.send('Hello world, I am a chat bot')
+    app.get('/', function (req, res)
+    {
+        console.log("plain GET request");
+        res.send('Hello World, I would like to be a chat bot')
     })
 
-    // for Facebook verification
-    app.get('/webhook/', function (req, res) {
-    	if (req.query['hub.verify_token'] === 'my_voice_is_my_password_verify_me') {
-    		res.send(req.query['hub.challenge'])
-    	}
-    	res.send('Error, wrong token')
-    })
 
     // Spin up the server
-    app.listen(app.get('port'), function() {
-    	console.log('running on port', app.get('port'))
+    app.listen(app.get('port'), function()
+    {   
+        console.log('running on port', app.get('port'))
     })
     ```
 
@@ -95,7 +92,7 @@ Messenger bots uses a web server to process messages it receives or to figure ou
 
 2. In the app go to Messenger tab then click Setup Webhook. Here you will put in the URL of your Heroku server and a token.  Go ahead and check all the subscription fields.  Be sure to add /webhook to the end of your Server URI.
 
-3. Get a Page Access Token and save this somewhere. We will use it in 2 places - once for setting up access to the Facebook API for your Bot and once trigger the Facebook app to send messages to the Bot.
+3. Get a Page Access Token and save this somewhere. We will use it in 2 places - once for setting up access to the Facebook API for your Bot and once trigger to the Facebook app to send messages to the Bot.
 
 4. Go back to Terminal and type in this command to trigger the Facebook app to send messages. Remember to use the token you requested earlier.
 
