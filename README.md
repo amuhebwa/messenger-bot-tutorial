@@ -85,7 +85,7 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     heroku create
     git push heroku master
     ```
-9. You should be able to "open your app" in Heroku to run it and see the hello world message.
+9. You should be able to "open your app" in Heroku to run it and see the Hello World message.
 
 10. If you want to change your server code, re-deploy it with the following commands (put your own comments in for the commit):
 
