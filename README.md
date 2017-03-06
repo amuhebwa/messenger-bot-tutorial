@@ -39,7 +39,13 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     npm install express request body-parser --save
     ```
 
-6. Create an index.js file in the folder and copy the following code into it. For this step, you will start by creating a basic Node.js server app. Later we will add the code to authenticate the Facebook Messenger Bot.
+6. Make a file called Procfile and copy this into it. This is so Heroku can know what file to run.
+
+    ```
+    web: node index.js
+    ```
+
+7. Create an index.js file in the folder and copy the following code into it. For this step, you will start by creating a basic Node.js server app. Later we will add the code to authenticate the Facebook Messenger Bot.
 
     ```javascript
     'use strict'
@@ -68,12 +74,6 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     {   
         console.log('running on port', app.get('port'))
     })
-    ```
-
-7. Make a file called Procfile and copy this into it. This is so Heroku can know what file to run.
-
-    ```
-    web: node index.js
     ```
 
 8. Commit all the code with Git then create a new Heroku instance and push the code to the cloud.
