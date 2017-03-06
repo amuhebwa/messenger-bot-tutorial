@@ -89,7 +89,6 @@ Messenger bots uses a web server to process messages it receives or to figure ou
 
 10. If you want to change your server code, re-deploy it with the following commands (put your own comments in for the commit):
 
-
     ```
     git add . 
     git commit --message "Your comment"
@@ -99,6 +98,24 @@ Messenger bots uses a web server to process messages it receives or to figure ou
  
 ## 🙌  Let's Bot Party 
 ### We will start our Bot Party by going through the rest of these steps together.
+
+### *Setup the Validation in your Server*
+
+1. Open two command-line prompts and in each, cd to your web server diretory.
+
+2. In one window, run this command so you can see your web server app logs:
+
+    ```
+    heroku logs --source app  -t
+    ```
+
+3. Use your other window to edit your index.js file and commit/push your changes.
+
+4. Refresh your Heroku app and you will see the messages that are logged to the console.
+
+5. Copy the index.js.v2 code into index.js and re-deploy.
+
+4. Refresh your Heroku app to verify that it still works correctly.
 
 ### *Setup the Facebook App*
 
