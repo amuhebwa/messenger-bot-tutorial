@@ -69,13 +69,13 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     })
     ```
 
-6. Make a file called Procfile and copy this into it. This is so Heroku can know what file to run.
+7. Make a file called Procfile and copy this into it. This is so Heroku can know what file to run.
 
     ```
     web: node index.js
     ```
 
-7. Commit all the code with Git then create a new Heroku instance and push the code to the cloud.
+8. Commit all the code with Git then create a new Heroku instance and push the code to the cloud.
 
     ```
     git init
@@ -84,9 +84,9 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     heroku create
     git push heroku master
     ```
-8. You should be able to "open your app" in Heroku to run it and see the hello world message.
+9. You should be able to "open your app" in Heroku to run it and see the hello world message.
 
-9. If you want to change your server code, re-deploy it with the following commands (put your own comments in for the commit):
+10. If you want to change your server code, re-deploy it with the following commands (put your own comments in for the commit):
 
 
     ```
@@ -96,7 +96,8 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     ```
 
  
-## 🙌  We will start our Bot Party by going through the rest of these steps together.
+## 🙌  Let's Bot Party 
+### *We will start our Bot Party by going through the rest of these steps together.*
 
 ### *Setup the Facebook App*
 
