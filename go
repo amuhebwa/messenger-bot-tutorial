@@ -1,4 +1,4 @@
 git pull origin master
 git add .
-git commit -m "Added code to validation webhook"
+git commit -m "Upates to instructions, added Very and Save steps"
 git push origin master

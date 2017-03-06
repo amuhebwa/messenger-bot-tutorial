@@ -1,14 +1,12 @@
 # 🤖 Creating your own Facebook Messenger bot
 
-![Alt text](/demo/Demo.gif)
-
 This tutorial is based on one from  2016 Jerry Wang (https://jw84.co) (c) 2106.
 
 Facebook recently opened up their Messenger platform to enable bots to converse with users through Facebook Apps and on Facebook Pages. 
 
 You can read the  [documentation](https://developers.facebook.com/docs/messenger-platform/quickstart) the Messenger team prepared but it's not very clear for beginners and intermediate hackers. 
 
-So instead here is how to create your own messenger bot in 15 minutes.
+So instead, here are details instructions on how to create your own Messenger Bot. 
 
 ## 🙌 Pre-Party, Get Set
 
@@ -121,9 +119,13 @@ Messenger bots uses a web server to process messages it receives or to figure ou
 
 1. Create or configure a Facebook App or Page here https://developers.facebook.com/apps/
 
-2. In the app go to Messenger tab then click Setup Webhook. Here you will put in the URL of your Heroku server and a token.  Go ahead and check all the subscription fields.  Be sure to add /webhook to the end of your Server URI.
+2. In the app go to Messenger tab then click Setup Webhook.  First, put in put in the URI of your Heroku server.  Be sure to add /webhook to the end of your Server URI.
 
-3. Get a Page Access Token and save this somewhere. We will use it in 2 places - once for setting up access to the Facebook API for your Bot and once trigger to the Facebook app to send messages to the Bot.
+Go ahead and check all the subscription fields. 
+
+Start with "xyz" for your token, see that it fails, and watch your Heroku log.  Then put in the YOUR_TOKEN you used in your index.js code. Verify and Save.
+
+3. Get a Page Access Token and save this somewhere. We will use it in 2 places - once later for setting up access to the Facebook API for your Bot and once now to trigger the Facebook app to send messages to the Bot.
 
 4. Go back to Terminal and type in this command to trigger the Facebook app to send messages. Remember to use the token you requested earlier.
 
