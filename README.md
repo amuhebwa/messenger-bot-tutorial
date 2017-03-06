@@ -120,10 +120,10 @@ Messenger bots uses a web server to process messages it receives or to figure ou
 1. Create or configure a Facebook App or Page here https://developers.facebook.com/apps/
 
 2. In the app go to Messenger tab then click Setup Webhook.  First, put in put in the URI of your Heroku server.  Be sure to add /webhook to the end of your Server URI.
-- Go ahead and check all the subscription fields. 
-- Start with "xyz" for your token, see that it fails, and watch your Heroku log.  Then put in the YOUR_TOKEN you used in your index.js code. Verify and Save.
+Go ahead and check all the subscription fields. 
+Start with "xyz" for your token, see that it fails, and watch your Heroku log.  Then put in the YOUR_TOKEN you used in your index.js code. Verify and Save.
 
-3. Get a Page Access Token and save this somewhere. We will use it in 2 places - once later for setting up access to the Facebook API for your Bot and once now to trigger the Facebook app to send messages to the Bot.
+3. Get a Page Access Token and save this somewhere. We will use it in 2 places - once later for setting up access to the Facebook API for your Bot and once now to trigger the Facebook app to send messages to the Bot. You will need to select the page that you created earlier.
 
 4. Go back to Terminal and type in this command to trigger the Facebook app to send messages. Remember to use the token you requested earlier.
 
@@ -135,24 +135,9 @@ Messenger bots uses a web server to process messages it receives or to figure ou
 
 Now that Facebook and Heroku can talk to each other we can code out the bot.
 
-1. Add an API endpoint to index.js to process messages. Remember to also include the token we got earlier. 
+1. So far we've been using GET. Your Bot will use POST, so we will write code in our Bot to handle the post requests that come from Facebook Messenger to your Bot.
 
-    ```javascript
-    app.post('/webhook/', function (req, res) {
-	    let messaging_events = req.body.entry[0].messaging
-	    for (let i = 0; i < messaging_events.length; i++) {
-		    let event = req.body.entry[0].messaging[i]
-		    let sender = event.sender.id
-		    if (event.message && event.message.text) {
-			    let text = event.message.text
-			    sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
-		    }
-	    }
-	    res.sendStatus(200)
-    })
-
-    const token = "<PAGE_ACCESS_TOKEN>"
-    ```
+2. Next, replace index.js with index.js.v3 and we will start coding out Bot to handle these requests.
     
     **Optional, but recommended**: keep your app secrets out of version control!
     - On Heroku, its easy to create dynamic runtime variables (known as [config vars](https://devcenter.heroku.com/articles/config-vars)). This can be done in the Heroku dashboard UI for your app **or** from the command line:
@@ -180,8 +165,7 @@ Now that Facebook and Heroku can talk to each other we can code out the bot.
     const token = process.env.FB_PAGE_ACCESS_TOKEN
     ```
     
-    
-3. Add a function to echo back messages
+3. This code adds the POST request handler to simply log the incoming messages. Note: once you deploy this, your Page's messenger will be broken (temporarily).
 
     ```javascript
     function sendTextMessage(sender, text) {
