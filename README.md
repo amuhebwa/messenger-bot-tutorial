@@ -142,9 +142,9 @@ Messenger bots uses a web server to process messages it receives or to figure ou
 
 1. Create a new Facebook Page: On your Home page, along the top is a drop down. Select it and you will see "Create Page".
 
-![Alt text](/images/CreatePage1.png)
+    ![Alt text](/images/CreatePage1.png)
 
-![Alt text](/images/CreatePage2.png)
+    ![Alt text](/images/CreatePage2.png)
 
 2. Create a new Facebook App: https://developers.facebook.com/apps/
 
