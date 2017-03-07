@@ -162,21 +162,39 @@ Messenger bots uses a web server to process messages it receives or to figure ou
 
     It is not stored in the page, so copy/paste and save it somewhere (perhaps in a Draft email).
 
-    We will use it in 2 places: once now to trigger the Facebook app to send messages to the Bot and once later for setting up access to the Facebook API for your Bot.
+    We will use it in 2 places: once now to trigger the Facebook App to send messages to the Bot and once later for setting up access to the Facebook API for your Bot.
 
-7. Go back to Terminal and type in this command to trigger the Facebook app to send messages. Remember to use the token you requested earlier.
+7. Go back to Terminal and type in this command to trigger the Facebook app to send messages. Remember to use the Page Access Token you requested and saved earlier.
 
     ```bash
     curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=<PAGE_ACCESS_TOKEN>"
     ```
 
-### *Setup the bot*
+### *Setup the Bot*
 
-Now that Facebook and Heroku can talk to each other we can code out the bot.
+Now that Facebook and Heroku can talk to each other we can start coding the Bot.
 
-1. So far we've been using GET. Your Bot will use POST, so we will write code in our Bot to handle the post requests that come from Facebook Messenger to your Bot.
+1. So far we've been using GET. Facebook Messenger will use POST to send requests to your Bot, so we will write code in our Server to handle the POST requests that come from Facebook Messenger to your Bot.
 
-2. Next, replace index.js with index.js.v3 and we will start coding out Bot to handle these requests.
+2. Next, replace index.js with index.js.v3 which has the start of code for our Bot to handle these requests.
+
+3. This code adds the POST request handler to simply log the incoming messages. Note: once you deploy this, your Page's messenger will be broken (temporarily). Show some code here:
+
+    ```javascript
+    ```
+
+4. Commit the code again and push to Heroku
+
+    ```
+    git add .
+    git commit -m 'updated the bot to speak'
+    git push heroku master
+    ```
+    
+
+### *Let's get the Bot Talking
+*
+1. Next, replace index.js with index.js.v3 which has the start of code for our Bot to handle these requests.  This file has the Page Access Token in it (you will need to change it to yours).
     
     **Optional, but recommended**: keep your app secrets out of version control!
     - On Heroku, its easy to create dynamic runtime variables (known as [config vars](https://devcenter.heroku.com/articles/config-vars)). This can be done in the Heroku dashboard UI for your app **or** from the command line:
@@ -204,40 +222,13 @@ Now that Facebook and Heroku can talk to each other we can code out the bot.
     const token = process.env.FB_PAGE_ACCESS_TOKEN
     ```
     
-3. This code adds the POST request handler to simply log the incoming messages. Note: once you deploy this, your Page's messenger will be broken (temporarily).
+2. Show some code
 
-    ```javascript
-    function sendTextMessage(sender, text) {
-	    let messageData = { text:text }
-	    request({
-		    url: 'https://graph.facebook.com/v2.6/me/messages',
-		    qs: {access_token:token},
-		    method: 'POST',
-    		json: {
-			    recipient: {id:sender},
-    			message: messageData,
-    		}
-    	}, function(error, response, body) {
-    		if (error) {
-			    console.log('Error sending messages: ', error)
-    		} else if (response.body.error) {
-			    console.log('Error: ', response.body.error)
-		    }
-	    })
-    }
-    ```
+3. Go to your Facebook Page and Select Menu, then View as Page Visitor.
 
-4. Commit the code again and push to Heroku
+    ![Alt text](/images/ViewPage.png)
 
-    ```
-    git add .
-    git commit -m 'updated the bot to speak'
-    git push heroku master
-    ```
-    
-5. Go to the Facebook Page and click on Message to start chatting!
-
-![Alt text](/demo/shot4.jpg)
+4. Select Send Message to start a Messenger conversation with your page.
 
 ## ⚙ Customize what the bot says
 
