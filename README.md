@@ -158,6 +158,8 @@ Messenger bots uses a web server to process messages it receives or to figure ou
 
 6. Get a Page Access Token and save this somewhere.  You will need to select the page that you created earlier.
 
+    ![Alt text](/images/PageAccessToken.png)
+
 We will use it in 2 places: once now to trigger the Facebook app to send messages to the Bot and once later for setting up access to the Facebook API for your Bot.
 
 7. Go back to Terminal and type in this command to trigger the Facebook app to send messages. Remember to use the token you requested earlier.
