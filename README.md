@@ -12,7 +12,8 @@ So instead, here are details instructions on how to create your own Messenger Bo
 
 Messenger bots uses a web server to process messages it receives or to figure out what messages to send. You will also need to have the bot be authenticated to speak with the web server and the bot approved by Facebook to speak with the public.
 
-### Before the Bot Party: *Build the Server*
+### Before the Bot Party:
+### *Build the Server*
 
 1. Make sure you have access to a Linux-flavor command line.
 
