@@ -121,17 +121,22 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     heroku logs --source app  -t
     ```
 
-3. Use your other window to edit your index.js file and commit/push your changes.
+3. Use your other window to edit your index.js file and commit/push your changes. Remember these steps to deploy your changes:
+
+    ```
+    git add .
+    git commit --message "Your comment"
+    git push heroku master
+    ```
 
 4. Refresh your Heroku app and you will see the messages that are logged to the console.
 
-5. Copy the index.js.v2 code into index.js, change the code to use your own token instead of YOUR_TOKEN, and re-deploy.
+5. Copy the index.js.v2 code into index.js and re-deploy.
 
 6. Refresh your Heroku app to verify that it still works correctly.
 
-7. In real-life, you should change the Very Code to use your own token instead of YOUR_TOKEN, and re-deploy.
+7. NOTE: In real-life, you should change the Very Code to use your own token instead of YOUR_TOKEN, and re-deploy, but for this tutorial it's ok to leave it.
 
-8. Refresh your Heroku app to verify that it still works correctly.
 
 ### *Setup the Facebook App*
 
@@ -141,17 +146,19 @@ Messenger bots uses a web server to process messages it receives or to figure ou
 
 ![Alt text](/images/CreatePage2.png)
 
-1. Create a new Facebook App: https://developers.facebook.com/apps/
+2. Create a new Facebook App: https://developers.facebook.com/apps/
 
-2. If you are not already a facebook Developer, become one.
+3. If you are not already a facebook Developer, become one.
 
-2. In the app go to Messenger tab then click Setup Webhook.  First, put in put in the URI of your Heroku server.  Be sure to add /webhook to the end of your Server URI.
-Go ahead and check all the subscription fields. 
-Start with "xyz" for your token, see that it fails, and watch your Heroku log.  Then put in the YOUR_TOKEN you used in your index.js code. Verify and Save.
+4. In the app go to Messenger tab then click Setup Webhook.  First, put in put in the URI of your Heroku server.  Be sure to add /webhook to the end of your Server URI. Go ahead and check all the subscription fields. 
 
-3. Get a Page Access Token and save this somewhere. We will use it in 2 places - once later for setting up access to the Facebook API for your Bot and once now to trigger the Facebook app to send messages to the Bot. You will need to select the page that you created earlier.
+5. Start with "xyz" for your token, see that it fails, and watch your Heroku log.  Then put in the YOUR_TOKEN (it needs to match your the code in index.js). Verify and Save.
 
-4. Go back to Terminal and type in this command to trigger the Facebook app to send messages. Remember to use the token you requested earlier.
+6. Get a Page Access Token and save this somewhere.  You will need to select the page that you created earlier.
+
+We will use it in 2 places: once now to trigger the Facebook app to send messages to the Bot and once later for setting up access to the Facebook API for your Bot.
+
+7. Go back to Terminal and type in this command to trigger the Facebook app to send messages. Remember to use the token you requested earlier.
 
     ```bash
     curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=<PAGE_ACCESS_TOKEN>"
