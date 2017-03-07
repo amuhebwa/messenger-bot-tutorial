@@ -156,9 +156,11 @@ Messenger bots uses a web server to process messages it receives or to figure ou
 
 5. Start with "xyz" for your token, see that it fails, and watch your Heroku log.  Then put in the YOUR_TOKEN (it needs to match your the code in index.js). Verify and Save.
 
-6. Get a Page Access Token and save this somewhere.  You will need to select the page that you created earlier.
+6. Get a Page Access Token. You select the page that you created earlier and the number will be generated.
 
     ![Alt text](/images/PageAccessToken.png)
+
+It is not stored in the page, so copy/paste and save it somewhere (perhaps in a Draft email).
 
 We will use it in 2 places: once now to trigger the Facebook app to send messages to the Bot and once later for setting up access to the Facebook API for your Bot.
 
