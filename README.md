@@ -178,9 +178,10 @@ Now that Facebook and Heroku can talk to each other we can start coding the Bot.
 
 2. Next, replace index.js with index.js.v3 which has the start of code for our Bot to handle these requests.
 
-3. This code adds the POST request handler to simply log the incoming messages. Note: once you deploy this, your Page's messenger will be broken (temporarily). Show some code here:
+3. This code adds the POST request handler to simply log the incoming messages. Note: once you deploy this, your Page's messenger will be broken (temporarily). 
 
     ```javascript
+    show some code here
     ```
 
 4. Commit the code again and push to Heroku
@@ -192,8 +193,8 @@ Now that Facebook and Heroku can talk to each other we can start coding the Bot.
     ```
     
 
-### *Let's get the Bot Talking
-*
+### *Let's get the Bot Talking*
+
 1. Next, replace index.js with index.js.v3 which has the start of code for our Bot to handle these requests.  This file has the Page Access Token in it (you will need to change it to yours).
     
     **Optional, but recommended**: keep your app secrets out of version control!
@@ -221,8 +222,12 @@ Now that Facebook and Heroku can talk to each other we can start coding the Bot.
     ``` javascript
     const token = process.env.FB_PAGE_ACCESS_TOKEN
     ```
-    
-2. Show some code
+
+2. This code echos ...
+
+    ```javascript
+    show some code here
+    ```
 
 3. Go to your Facebook Page and Select Menu, then View as Page Visitor.
 
