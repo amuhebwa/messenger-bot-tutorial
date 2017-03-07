@@ -95,6 +95,11 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     ```
 
 ### Before the Bot Party:
+### *Become A Facebook Developer*
+
+1. If you are not already a facebook Developer, become one: https://developers.facebook.com/
+
+### Before the Bot Party:
 ### *Get setup to Learn about Natural Language for Developers with https://wit.ai/*
 
     ```
@@ -122,11 +127,22 @@ Messenger bots uses a web server to process messages it receives or to figure ou
 
 5. Copy the index.js.v2 code into index.js, change the code to use your own token instead of YOUR_TOKEN, and re-deploy.
 
-4. Refresh your Heroku app to verify that it still works correctly.
+6. Refresh your Heroku app to verify that it still works correctly.
+
+7. In real-life, you should change the Very Code to use your own token instead of YOUR_TOKEN, and re-deploy.
+
+8. Refresh your Heroku app to verify that it still works correctly.
 
 ### *Setup the Facebook App*
 
-1. Create or configure a Facebook App or Page here https://developers.facebook.com/apps/
+1. Create a new Facebook Page: On your Home page, along the top is a drop down. Select it and you will see "Create Page".
+
+    !(/images/CreatePage1.png)
+    !(/images/CreatePage2.png)
+
+1. Create a new Facebook App: https://developers.facebook.com/apps/
+
+2. If you are not already a facebook Developer, become one.
 
 2. In the app go to Messenger tab then click Setup Webhook.  First, put in put in the URI of your Heroku server.  Be sure to add /webhook to the end of your Server URI.
 Go ahead and check all the subscription fields. 
