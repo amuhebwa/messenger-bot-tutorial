@@ -94,7 +94,8 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     git push heroku master
     ```
 
-### Before the Bot Party: *Get setup to Learn about Natural Language for Developers with https://wit.ai/*
+### Before the Bot Party:
+### *Get setup to Learn about Natural Language for Developers with https://wit.ai/*
 
     ```
     git clone https://github.com/wit-ai/node-wit
