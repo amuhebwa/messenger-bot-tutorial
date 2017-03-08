@@ -2,7 +2,7 @@
 
 This tutorial is based on the Facebook Quickstart https://developers.facebook.com/docs/messenger-platform/guides/quick-start and one from  Jerry Wang (https://jw84.co) (c) 2106: https://github.com/jw84/messenger-bot-tutorial.
 
-If you have not already done so, please finish the setup outlined in the PreParty.md file.
+If you have not already done so, please finish the setup outlined in the [PreParty.md](https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/PreParty.md) file.
 
 ## 🙌  Let's Bot Party 
 ### We will start our Bot Party by going through the rest of these steps together.

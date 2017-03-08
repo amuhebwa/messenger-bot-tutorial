@@ -1,4 +1,4 @@
-# 🤖 Creating your own Facebook Messenger bot
+# 🤖 Creating your own Facebook Messenger Bot - CMU-Africa 2017 Bot Party & Hackathon
 
 This tutorial is based on the following tutorials:
 
@@ -7,7 +7,7 @@ This tutorial is based on the following tutorials:
 
 ## 🙌 Pre-Party, Get Set
 
-[PreParty.md](https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/PreParty.md)
+    [PreParty.md](https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/PreParty.md)
 
 ----------------------------------------------
 ## In-Progress, please Ignore the rest
@@ -15,7 +15,9 @@ This tutorial is based on the following tutorials:
 
 ## 🙌  Let's Bot Party 
 
-[Tutorial.md](https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/Tutorial.md)
+    [Basic Tutorial](https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/Tutorial.md)
+
+    [Wit.ai Tutorial](https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/WitaiTutorial.md)
 
 ## 📡 How to share your bot
 
@@ -33,8 +35,6 @@ You can use https://m.me/<PAGE_USERNAME> to have someone start a chat.
 ## 💡 What's next?
 
 You can learn how to get your bot approved for public use [here](https://developers.facebook.com/docs/messenger-platform/app-review).
-
-You can also connect an AI brain to your bot [here](https://wit.ai)
 
 Read about all things chat bots with the ChatBots Magazine [here](https://medium.com/chat-bots)
 
