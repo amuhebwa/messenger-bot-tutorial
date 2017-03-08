@@ -7,7 +7,7 @@ This tutorial is based on the following tutorials:
 
 ## 🙌 Pre-Party, Get Set
 
-[PreParty.md]https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/PreParty.md
+[PreParty.md](https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/PreParty.md)
 
 ----------------------------------------------
 ## In-Progress, please Ignore the rest
@@ -15,7 +15,7 @@ This tutorial is based on the following tutorials:
 
 ## 🙌  Let's Bot Party 
 
-[Tutorial.md]https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/Tutorial.md
+[Tutorial.md](https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/Tutorial.md)
 
 ## 📡 How to share your bot
 
