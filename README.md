@@ -1,4 +1,6 @@
-# 🤖 Creating your own Facebook Messenger Bot - CMU-Africa 2017 Bot Party & Hackathon
+# 🤖 Create your own Facebook Messenger Bot
+
+# CMU-Africa 2017 Bot Party & Hackathon
 
 This tutorial is based on the following tutorials:
 

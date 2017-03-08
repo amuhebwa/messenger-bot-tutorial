@@ -1,4 +1,4 @@
-# 🤖 Creating your own Facebook Messenger Bot - Setup
+# 🤖 Create your own Facebook Messenger Bot - Setup
 
 This tutorial is based on the following tutorials:
 
