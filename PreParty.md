@@ -20,8 +20,9 @@ Messenger Bots use a web server to process the messages they receive via Faceboo
     sudo npm install npm -g
     ```
 
-4. Make a new folder called *myBot1* and cd to this directory. You will create a Node project for your server in this directory. Once you have cd'd there, run the following command; you may hit Enter to accept the defaults.
+4. Make a new folder called *myBot1* and cd to this directory. You will create a Node project for your server in this directory.
 
+    Once you have cd'd there, run the following command; you may press Enter to accept the defaults.
 
     ```
     npm init
@@ -113,4 +114,4 @@ If you are not already a facebook Developer, become one: https://developers.face
     npm install
     ```
  
-Note: we will go through it together, just clone the code for now.
+    Note: we will go through it together, just clone the code for now.
