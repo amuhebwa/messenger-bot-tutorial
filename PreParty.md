@@ -89,10 +89,11 @@ Messenger Bots use a web server to process the messages they receive via Faceboo
     git push heroku master
     ```
 
-### 3. Become A Facebook Developer. If you are not already a facebook Developer, become one: https://developers.facebook.com/
+### 3. Become A Facebook Developer.
+
+If you are not already a facebook Developer, become one: https://developers.facebook.com/
 
 ### 4. Get setup to Learn about Natural Language for Developers.
-
 
 1. Create your login at https://wit.ai/
 
