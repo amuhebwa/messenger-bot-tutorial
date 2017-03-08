@@ -6,8 +6,7 @@ This tutorial is based on the Facebook Quickstart https://developers.facebook.co
 
 Messenger bots uses a web server to process messages it receives or to figure out what messages to send. You will also need to have the bot be authenticated to speak with the web server and the bot approved by Facebook to speak with the public.
 
-### Before the Bot Party:
-### *Build the Server*
+### Build the Server
 
 1. Make sure you have access to a Linux-flavor command line.
 
@@ -19,7 +18,7 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     sudo npm install npm -g
     ```
 
-4. Make a new folder and cd to this directory. You will create a Node project for your server in this directory. Once you have cd'd there, run the following command; you may hit Enter to accept the defaults.
+4. Make a new folder called *myBot1* and cd to this directory. You will create a Node project for your server in this directory. Once you have cd'd there, run the following command; you may hit Enter to accept the defaults.
 
 
     ```
@@ -89,13 +88,13 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     ```
 
 ### Before the Bot Party:
-### *Become A Facebook Developer*
+### Become A Facebook Developer
 
-1. If you are not already a facebook Developer, become one: https://developers.facebook.com/
+If you are not already a facebook Developer, become one: https://developers.facebook.com/
 
-### Before the Bot Party:
-### *Get setup to Learn about Natural Language for Developers with https://wit.ai/*
+### Get setup to Learn about Natural Language for Developers with https://wit.ai/
 
+1. Make a new folder called *myWit.aiBot1* and cd to this directory. Then close the Demo code form Wit-ai:
     ```
     git clone https://github.com/wit-ai/node-wit
     cd node-wit
