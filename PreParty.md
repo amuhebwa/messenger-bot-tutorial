@@ -100,7 +100,7 @@ If you are not already a facebook Developer, become one: https://developers.face
 2. At the cool stuff, add this: 
 
     ```
-    I'm in the CMU-Africa 2017 Bot-Party & Hackathon #CMUHackathon2017 and and we hope to create an amazing \<youridea\> Messenger Bot for the #messengerchallenge
+    #CMUHackathon2017 - we plan to create an amazing \<youridea\> Messenger Bot for the #messengerchallenge
     ```
 
 3. Make a new folder called *myWit.aiBot1* and cd to this directory. 
