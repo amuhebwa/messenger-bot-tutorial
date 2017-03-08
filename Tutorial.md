@@ -61,7 +61,7 @@ If you have not already done so, please finish the setup outlined in the [PrePar
 
     We will use it in 2 places: once now to trigger the Facebook App to send messages to the Bot and once later for setting up access to the Facebook API for your Bot.
 
-7. Go back to Terminal and type in this command to trigger the Facebook app to send messages. Instead of <PAGE_ACCESS_TOKEN>, use the Page Access Token you requested and saved in the previous step.
+7. Go back to Terminal and type in this command to trigger the Facebook app to send messages. Instead of \<PAGE_ACCESS_TOKEN\>, use the Page Access Token you requested and saved in the previous step.
 
     ```bash
     curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=<PAGE_ACCESS_TOKEN>"
