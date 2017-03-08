@@ -53,7 +53,7 @@ If you have not already done so, please finish the setup outlined in the [PrePar
 
 5. Start with "xyz" for your Verify Token, see that it fails, and watch your Heroku log.  Then put in the YOUR_TOKEN (it needs to match your the code in index.js). Verify and Save.
 
-6. Scroll UP to Token Generation to get a Page Access Token. You select the page that you created earlier and the number will be generated.
+6. Scroll UP to Token Generation to get a Page Access Token. Select the page that you created earlier and the number will be generated.
 
     ![Alt text](/images/PageAccessToken.png)
 
