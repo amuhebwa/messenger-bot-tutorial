@@ -9,7 +9,7 @@ If you have not already done so, please finish the setup outlined in the [PrePar
 
 ### *Setup the Validation in your Server*
 
-1. Open two command-line prompts and in each, cd to your web server diretory that you created during Setup.
+1. Open two command-line prompts and in each, cd to the web server diretory that you created during Setup.
 
 2. In one window, run this command so you can see your web server app logs:
 
@@ -43,15 +43,15 @@ If you have not already done so, please finish the setup outlined in the [PrePar
 
     ![Alt text](/images/CreatePage2.png)
 
-2. Create a new Facebook App: https://developers.facebook.com/apps/ make it a Messenger App.
+2. Create a new Facebook App: https://developers.facebook.com/apps/. Make it a Messenger App.
 
-3. If you are not already a facebook Developer, become one.
+3. Note: If you are not already a Facebook Developer, you will need to become one.
 
-4. In the App, go to Messenger tab, and under setting scroll down and click Setup Webhook.  First, put in the URI of your Heroku server.  Be sure to add /webhook to the end of your Server URI. Go ahead and check all the subscription fields. 
+4. In the App, go to Messenger tab, and under Settings, scroll down and click Setup Webhook.  First, put in the URI of your Heroku server.  Be sure to add /webhook to the end of your Server URI. Go ahead and check all the subscription fields. 
 
     ![Alt text](/images/WebHook.png)
 
-5. Start with "xyz" for your Verity Token, see that it fails, and watch your Heroku log.  Then put in the YOUR_TOKEN (it needs to match your the code in index.js). Verify and Save.
+5. Start with "xyz" for your Verify Token, see that it fails, and watch your Heroku log.  Then put in the YOUR_TOKEN (it needs to match your the code in index.js). Verify and Save.
 
 6. Scroll UP to Token Generation to get a Page Access Token. You select the page that you created earlier and the number will be generated.
 
