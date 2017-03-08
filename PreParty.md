@@ -4,7 +4,7 @@ This tutorial is based on the Facebook Quickstart https://developers.facebook.co
 
 ## 🙌 Pre-Party, Get Set
 
-Messenger bots uses a web server to process messages it receives or to figure out what messages to send. You will also need to have the bot be authenticated to speak with the web server and the bot approved by Facebook to speak with the public.
+Messenger Bots use a web server to process the messages they receive via Facebook Messenger. Do these steps to setup a basic Node.js server on Heroku, get ready to become a Facebook Developer, and then prepare to Bot Party!
 
 ### Build the Server
 
@@ -87,7 +87,6 @@ Messenger bots uses a web server to process messages it receives or to figure ou
     git push heroku master
     ```
 
-### Before the Bot Party:
 ### Become A Facebook Developer
 
 If you are not already a facebook Developer, become one: https://developers.facebook.com/
@@ -97,10 +96,10 @@ If you are not already a facebook Developer, become one: https://developers.face
 
 1. Create your login at https://wit.ai/
 
-2. At the cool stuff, add this: 
+2. At the cool stuff, add something this: 
 
     ```
-    #CMUHackathon2017 - we will create an amazing Messenger Bot for the #messengerchallenge
+    #CMUHackathon2017 We will create an amazing Messenger Bot for the #messengerchallenge
     ```
 
 3. Make a new folder called *myWit.aiBot1* and cd to this directory. 
