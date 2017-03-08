@@ -1,9 +1,17 @@
 # 🤖 Creating your own Facebook Messenger bot
 
-This tutorial is based on the Facebook Quickstart https://developers.facebook.com/docs/messenger-platform/guides/quick-start and one from  Jerry Wang (https://jw84.co) (c) 2106: https://github.com/jw84/messenger-bot-tutorial.
+This tutorial is based on the folowing tutorials:
+
+1. Facebook Quickstart https://developers.facebook.com/docs/messenger-platform/guides/quick-start
+2. https://github.com/jw84/messenger-bot-tutorial Copyright (c) 2016 Jerry Wang (https://jw84.co)
+
 
 ## 🙌 Pre-Party, Get Set
 PreParty.md
+
+## -----------------------------------
+## In-Progress, please Ignore the rest
+## -----------------------------------
 
 ## 🙌  Let's Bot Party 
 Tutorial.md
