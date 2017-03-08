@@ -100,10 +100,10 @@ If you are not already a facebook Developer, become one: https://developers.face
 1. Make a new folder called *myWit.aiBot1* and cd to this directory. 
 2. In this directory (cd there first), clone the demo code from the Wit.ai quickstart: https://wit.ai/docs/quickstart
 
-Note: we will go through it together, just clone the code fore now.
     ```
     git clone https://github.com/wit-ai/node-wit
     cd node-wit
     npm install
     ```
  
+Note: we will go through it together, just clone the code for now.
