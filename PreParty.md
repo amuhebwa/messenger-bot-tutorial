@@ -6,7 +6,9 @@ This tutorial is based on the Facebook Quickstart https://developers.facebook.co
 
 Messenger Bots use a web server to process the messages they receive via Facebook Messenger. Do these steps to setup a basic Node.js server on Heroku, get ready to become a Facebook Developer, and then prepare to Bot Party!
 
-### Build the Server
+1. ### If you are not already in GitHub, signup here: https://github.com/
+
+2. ### Build the Server
 
 1. Make sure you have access to a Linux-flavor command line.
 
@@ -25,7 +27,7 @@ Messenger Bots use a web server to process the messages they receive via Faceboo
     npm init
     ```
 
-5. Install the additional Node dependencies. Express is for the server, request is for sending out messages and body-parser is to process messages.
+5. Install the additional Node dependencies: express is for the server, request is for sending out messages and body-parser is to process messages.
 
     ```
     npm install express request body-parser --save
@@ -87,11 +89,11 @@ Messenger Bots use a web server to process the messages they receive via Faceboo
     git push heroku master
     ```
 
-### Become A Facebook Developer
+3. ### Become A Facebook Developer
 
 If you are not already a facebook Developer, become one: https://developers.facebook.com/
 
-### Get setup to Learn about Natural Language for Developers with https://wit.ai/
+### 4. Get setup to Learn about Natural Language for Developers with https://wit.ai/
 
 
 1. Create your login at https://wit.ai/
