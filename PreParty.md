@@ -94,7 +94,13 @@ If you are not already a facebook Developer, become one: https://developers.face
 
 ### Get setup to Learn about Natural Language for Developers with https://wit.ai/
 
-1. Make a new folder called *myWit.aiBot1* and cd to this directory. Then close the Demo code form Wit-ai:
+
+1. Create your login at https://wit.ai/
+2. At the cool stuff, add this: "I'm in the CMU-Africa 2017 Bot-Party & Hackathon #CMUHackathon2017 and and we hope to create an amazing <youridea> Messenger Bot for the #messengerchallenge"
+1. Make a new folder called *myWit.aiBot1* and cd to this directory. 
+2. In this directory (cd there first), clone the demo code from the Wit.ai quickstart: https://wit.ai/docs/quickstart
+
+Note: we will go through it together, just clone the code fore now.
     ```
     git clone https://github.com/wit-ai/node-wit
     cd node-wit
