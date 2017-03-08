@@ -22,7 +22,7 @@ Messenger Bots use a web server to process the messages they receive via Faceboo
 
 4. Make a new folder called *myBot1* and cd to this directory. You will create a Node project for your server in this directory.
 
-    Once you have cd'd there, run the following command; you may press Enter to accept the defaults.
+    Once you have cd'd there, run the following command. You may press Enter to accept the defaults.
 
     ```
     npm init
