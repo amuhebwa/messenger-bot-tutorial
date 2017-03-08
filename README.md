@@ -25,7 +25,7 @@ This tutorial is based on the following tutorials:
 
 ### *Add a chat button to your webpage*
 
-Go [here](https://developers.facebook.com/docs/messenger-platform/plugin-reference) to learn how to add a chat button your page.
+Go [there](https://developers.facebook.com/docs/messenger-platform/plugin-reference) to learn how to add a chat button your page.
 
 ### *Create a shortlink*
 
