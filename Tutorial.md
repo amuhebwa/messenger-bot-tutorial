@@ -9,7 +9,7 @@ If you have not already done so, please finish the setup outlined in the [PrePar
 
 ### *Setup the Validation in your Server*
 
-1. Open two command-line prompts and in each, cd to your web server diretory.
+1. Open two command-line prompts and in each, cd to your web server diretory that you created durint Setup.
 
 2. In one window, run this command so you can see your web server app logs:
 
@@ -31,12 +31,13 @@ If you have not already done so, please finish the setup outlined in the [PrePar
 
 6. Refresh your Heroku app to verify that it still works correctly.
 
-7. NOTE: In real-life, you should change the Very Code to use your own token instead of YOUR_TOKEN, and re-deploy, but for this tutorial it's ok to leave it.
+7. NOTE: In real-life, you should change the Verify Code to use your own token instead of YOUR_TOKEN, and re-deploy, but for this tutorial it's ok to leave it.
 
 
 ### *Setup the Facebook App*
 
-1. Create a new Facebook Page: On your Home page, along the top is a drop down. Select it and you will see "Create Page".
+1. Create a new Facebook Page:
+    On your Home page, along the top is a drop down. Select it and you will see "Create Page".
 
     ![Alt text](/images/CreatePage1.png)
 
