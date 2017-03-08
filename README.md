@@ -9,7 +9,7 @@ This tutorial is based on the following tutorials:
 
 ## 🙌 Pre-Party, Get Set
 
-    [PreParty.md](https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/PreParty.md)
+[PreParty.md](https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/PreParty.md)
 
 ----------------------------------------------
 ## In-Progress, please Ignore the rest
@@ -17,15 +17,15 @@ This tutorial is based on the following tutorials:
 
 ## 🙌  Let's Bot Party 
 
-    [Basic Tutorial](https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/Tutorial.md)
+[Basic Tutorial](https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/Tutorial.md)
 
-    [Wit.ai Tutorial](https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/WitaiTutorial.md)
+[Wit.ai Tutorial](https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/WitaiTutorial.md)
 
 ## 📡 How to share your bot
 
 ### *Add a chat button to your webpage*
 
-Go [there](https://developers.facebook.com/docs/messenger-platform/plugin-reference) to learn how to add a chat button your page.
+Go [here](https://developers.facebook.com/docs/messenger-platform/plugin-reference) to learn how to add a chat button your page.
 
 ### *Create a shortlink*
 
