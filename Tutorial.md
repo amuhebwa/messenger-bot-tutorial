@@ -71,7 +71,7 @@ If you have not already done so, please finish the setup outlined in the [PrePar
 
 Now that Facebook and Heroku can talk to each other we can start coding the Bot.
 
-1. So far we've been using GET. Facebook Messenger will use POST to send requests to your Bot, so we will write code in our Server to handle the POST requests that come from Facebook Messenger to your Bot.
+1. So far our Server has been using GET, both for the Hello World server and the Facebook App Verification. Facebook Messenger will use POST to send requests to your Bot, so we will write code in our Server to handle the POST requests that come from Facebook Messenger to your Bot.
 
 2. Next, replace index.js with index.js.v3 which has the start of code for our Bot to handle these requests.
 
