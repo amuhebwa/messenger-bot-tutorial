@@ -6,7 +6,8 @@ This tutorial is based on the following tutorials:
 2. https://github.com/jw84/messenger-bot-tutorial Copyright (c) 2016 Jerry Wang (https://jw84.co)
 
 ## 🙌 Pre-Party, Get Set
-(PreParty.md)
+
+https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/PreParty.md
 
 ## -----------------------------------
 ## In-Progress, please Ignore the rest
