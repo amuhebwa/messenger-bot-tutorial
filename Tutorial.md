@@ -9,7 +9,7 @@ If you have not already done so, please finish the setup outlined in the [PrePar
 
 ### *Setup the Validation in your Server*
 
-1. Open two command-line prompts and in each, cd to your web server diretory that you created durint Setup.
+1. Open two command-line prompts and in each, cd to your web server diretory that you created during Setup.
 
 2. In one window, run this command so you can see your web server app logs:
 
@@ -17,7 +17,7 @@ If you have not already done so, please finish the setup outlined in the [PrePar
     heroku logs --source app  -t
     ```
 
-3. Use your other window to edit your index.js file and commit/push your changes. Remember these steps to deploy your changes:
+3. Use your other window to edit your index.js file and commit/push your changes. Try changing the "Hello World" text. Remember these steps to deploy your changes:
 
     ```
     git add .
