@@ -96,9 +96,16 @@ If you are not already a facebook Developer, become one: https://developers.face
 
 
 1. Create your login at https://wit.ai/
-2. At the cool stuff, add this: "I'm in the CMU-Africa 2017 Bot-Party & Hackathon #CMUHackathon2017 and and we hope to create an amazing \<youridea\> Messenger Bot for the #messengerchallenge"
-1. Make a new folder called *myWit.aiBot1* and cd to this directory. 
-2. In this directory (cd there first), clone the demo code from the Wit.ai quickstart: https://wit.ai/docs/quickstart
+
+2. At the cool stuff, add this: 
+
+    ```
+    I'm in the CMU-Africa 2017 Bot-Party & Hackathon #CMUHackathon2017 and and we hope to create an amazing \<youridea\> Messenger Bot for the #messengerchallenge
+    ```
+
+3. Make a new folder called *myWit.aiBot1* and cd to this directory. 
+
+4. In this new directory (cd there first), clone the demo code from the Wit.ai quickstart: https://wit.ai/docs/quickstart
 
     ```
     git clone https://github.com/wit-ai/node-wit
