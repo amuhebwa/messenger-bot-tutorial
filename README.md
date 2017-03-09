@@ -35,8 +35,15 @@ Go [here](https://developers.facebook.com/docs/messenger-platform/plugin-referen
 
 You can use https://m.me/<PAGE_USERNAME> to have someone start a chat.
 
-## 💡 What's New?
+## 💡 What Else?
 
+### Here are some references for Carousel Ads and other Ads:
+
+    https://designschool.canva.com/blog/snatch-competitive-advantage-facebook-instagram-carousel-ads/?utm_campaign=Retention%3A%20CanvaDrip%3A%20Instagram3
+
+    https://www.facebook.com/business/ads-guide/?tab0=Mobile%20News%20Feed
+
+### Let me know anything else that would be useful to share and I will add it.
 
 ## 💡 What's next?
 
