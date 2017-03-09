@@ -174,10 +174,15 @@ app.post('/webhook', function (req, res)
     const token = process.env.FB_PAGE_ACCESS_TOKEN
     ```
 
-2. This code echos ...
+2. Update your index.js so that instead of logging the incoming message, it calls a function to process it.
 
+    So change this line (it should be line 78):
     ```javascript
-    show some code here
+    console.log("Bot received message");
+    ```
+    to this:
+    ```javascript
+    functs.receivedMessage(event);
     ```
 
 3. Go to your Facebook Page and Select Menu, then View as Page Visitor.
