@@ -343,24 +343,4 @@ Facebook Messenger can send messages structured as cards or buttons.
 
 6. Look through the code to see what it is doing.
 
-
-## 📡 How to share your bot
-
-### *Add a chat button to your webpage*
-
-Go [here](https://developers.facebook.com/docs/messenger-platform/plugin-reference) to learn how to add a chat button your page.
-
-### *Create a shortlink*
-
-You can use https://m.me/<PAGE_USERNAME> to have someone start a chat.
-
-## 💡 What's next?
-
-You can learn how to get your bot approved for public use [here](https://developers.facebook.com/docs/messenger-platform/app-review).
-
-You can also connect an AI brain to your bot [here](https://wit.ai)
-
-Read about all things chat bots with the ChatBots Magazine [here](https://medium.com/chat-bots)
-
-You can also design Messenger bots in Sketch with the [Bots UI Kit](https://bots.mockuuups.com)!
-
+##  :grinning: There you have it - a basic Messenger Bot!
