@@ -143,7 +143,9 @@ app.post('/webhook', function (req, res)
 
 8. Return to your Facebook page and send your Page a message from your user Messenger window.
 
-9. Watch your Heroku logs!
+9. Note: you as a *User* are using Facebook Messenger to have a conversation with your *Page*, which you own.
+
+10. Watch your Heroku logs!
 
 ### *Let's get the Bot Talking*
 
@@ -159,7 +161,6 @@ app.post('/webhook', function (req, res)
     
     **Optional, but recommended**: keep your app secrets out of version control!
     - On Heroku, its easy to create dynamic runtime variables (known as [config vars](https://devcenter.heroku.com/articles/config-vars)). This can be done in the Heroku dashboard UI for your app **or** from the command line:
-    ![Alt text](/demo/config_vars.jpg)
     ```bash
     heroku config:set FB_PAGE_ACCESS_TOKEN=fake-access-token-dhsa09uji4mlkasdfsd
     
@@ -185,7 +186,7 @@ app.post('/webhook', function (req, res)
 
 2. Update your index.js so that instead of simply logging the incoming message, it calls the function to process it.
 
-    So change this line (it should be line 78):
+    You should change this line (it should be line 78):
     ```javascript
     console.log("Bot received message " + event.message.text);
     ```
@@ -196,6 +197,11 @@ app.post('/webhook', function (req, res)
 
 3. Look at the receivedMessage() code to see what it is doing.
 
+4. Talk to your Page some more and watch your Heroku log.
+
+5. Remember, you, as a *User* are using Facebook Messenger to have a conversation with your *Page*. And your *Bot* (the Webserver) is receiving those messages through your *App* and your Bot is now able to respond.
+
+##  :sweat_smile: You Rock!!
 
 ## ⚙ Customize what the bot says
 
