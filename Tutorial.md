@@ -101,7 +101,7 @@ app.post('/webhook', function (req, res)
                 if (event.message.is_echo)
                       console.log("Bot received message written event");
                 else
-                      console.log("Bot received message");
+                      console.log("Bot received message " + event.message.text);
             }
             else  if (event.delivery)
               console.log("Bot received delivery event");
@@ -187,7 +187,7 @@ app.post('/webhook', function (req, res)
 
     So change this line (it should be line 78):
     ```javascript
-    console.log("Bot received message");
+    console.log("Bot received message " + event.message.text);
     ```
     to this:
     ```javascript
