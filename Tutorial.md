@@ -135,6 +135,15 @@ app.post('/webhook', function (req, res)
     git push heroku master
     ```
     
+6. Go to your Facebook Page and Select Menu, then View as Page Visitor.
+
+    ![Alt text](/images/VisitPage.png)
+
+7. Select Send Message to start a Messenger conversation with your page.
+
+8. Return to your Facebook page and send your Page a message from your user Messenger window.
+
+9. Watch your Heroku logs!
 
 ### *Let's get the Bot Talking*
 
@@ -174,7 +183,7 @@ app.post('/webhook', function (req, res)
     const token = process.env.FB_PAGE_ACCESS_TOKEN
     ```
 
-2. Update your index.js so that instead of logging the incoming message, it calls a function to process it.
+2. Update your index.js so that instead of simply logging the incoming message, it calls the function to process it.
 
     So change this line (it should be line 78):
     ```javascript
@@ -185,11 +194,8 @@ app.post('/webhook', function (req, res)
     functs.receivedMessage(event);
     ```
 
-3. Go to your Facebook Page and Select Menu, then View as Page Visitor.
+3. Look at the receivedMessage() code to see what it is doing.
 
-    ![Alt text](/images/ViewPage.png)
-
-4. Select Send Message to start a Messenger conversation with your page.
 
 ## ⚙ Customize what the bot says
 
