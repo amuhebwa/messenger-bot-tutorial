@@ -302,7 +302,7 @@ Facebook Messenger can send messages structured as cards or buttons.
 
 1. What happens when the user clicks on a message button or card? It sends the *payload* to the Bot. Give it a try.
 
-2. Click on Help Me Apply and watch your log. You will see this:
+2. Click on *Help Me Apply* and watch your log. You will see this:
     ```
     Stub: process the postback
     ```
