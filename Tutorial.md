@@ -199,119 +199,110 @@ app.post('/webhook', function (req, res)
 
 4. Talk to your Page some more and watch your Heroku log.
 
-5. Remember, you, as a *User* are using Facebook Messenger to have a conversation with your *Page*. And your *Bot* (the Webserver) is receiving those messages through your *App* and your Bot is now able to respond.
+5. Remember, you, as a *User* are using Facebook Messenger to have a conversation with your *Page*. And your *Bot* (the Webserver) is receiving those messages through your *App* and your *Bot* is now also able to respond.
+
+6. What happens when you (the *User*) send the message **Knock Knock**?
 
 ##  :sweat_smile: You Rock!!
 
 ## ⚙ Customize what the bot says
 
+### *Start with Custom Responses*
+1. This example shows coding a simple rule - if the User send **Knock Knock**, the Bot will respond with **Who's there?**
+
+2. Hopefully you can easily see where you might hook in more complicated rule-based processing to make our Bot pretty smart at responding in an autonomous way.
+
+3. The Send API reference https://developers.facebook.com/docs/messenger-platform/send-api-reference#message is a good place to start for more details.
+
 ### *Send a Structured Message*
 
 Facebook Messenger can send messages structured as cards or buttons. 
 
-![Alt text](/demo/shot5.jpg)
+1. In the functs.js, you will see a stub called sendGenericMessage(). This is called when the User types the word structured (see line 33 in functs.js).
 
-1. Copy the code below to index.js to send a test message back as two cards.
+2. Try typing it in your Messenger window and you will see this:
+    ```
+    Stub: send generic (templated) message
+    ```
 
+3. Next, we will write the code to send a response back as two cards.
+
+4. Copy the code below to replace genericMessage() in index.js to send a test message back as two cards.
+
+    Replace this:
     ```javascript
-    function sendGenericMessage(sender) {
-	    let messageData = {
-		    "attachment": {
-			    "type": "template",
-			    "payload": {
-    				"template_type": "generic",
-				    "elements": [{
-    					"title": "First card",
-					    "subtitle": "Element #1 of an hscroll",
-					    "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
-					    "buttons": [{
-						    "type": "web_url",
-						    "url": "https://www.messenger.com",
-						    "title": "web url"
-					    }, {
-						    "type": "postback",
-						    "title": "Postback",
-						    "payload": "Payload for first element in a generic bubble",
-					    }],
-				    }, {
-					    "title": "Second card",
-					    "subtitle": "Element #2 of an hscroll",
-					    "image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
-					    "buttons": [{
-						    "type": "postback",
-						    "title": "Postback",
-						    "payload": "Payload for second element in a generic bubble",
-					    }],
-				    }]
-			    }
-		    }
-	    }
-	    request({
-		    url: 'https://graph.facebook.com/v2.6/me/messages',
-		    qs: {access_token:token},
-		    method: 'POST',
-		    json: {
-			    recipient: {id:sender},
-			    message: messageData,
-		    }
-	    }, function(error, response, body) {
-		    if (error) {
-			    console.log('Error sending messages: ', error)
-		    } else if (response.body.error) {
-			    console.log('Error: ', response.body.error)
-		    }
-	    })
+    sendGenericMessage: function(toId)
+    {
+      console.log("Stub: send generic (templated) message");
     }
     ```
-
-2. Update the webhook API to look for special messages to trigger the cards
-
+    with this code:
     ```javascript
-    app.post('/webhook/', function (req, res) {
-	    let messaging_events = req.body.entry[0].messaging
-	    for (let i = 0; i < messaging_events.length; i++) {
-		    let event = req.body.entry[0].messaging[i]
-		    let sender = event.sender.id
-		    if (event.message && event.message.text) {
-			    let text = event.message.text
-			    if (text === 'Generic') {
-				    sendGenericMessage(sender)
-			    	continue
-			    }
-			    sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
-		    }
-	    }
-	    res.sendStatus(200)
-    })
+    sendGenericMessage: function(toId)
+    {
+      console.log("Sending message with 2 Cards to id: " + toId)
+      var messageData = {
+        recipient: {
+          id: toId
+        },
+        message: {
+          attachment: {
+            type: "template",
+            payload: {
+              template_type: "generic",
+              elements: [
+                {
+                title: "CMU-Africa",
+                subtitle: "In Kigali",
+                item_url: "http://www.cmu.edu/africa/about-cmur/index.html",
+                image_url: "http://www.cmu.edu/africa/files/images/bios/About%20CMU%20Rwanda.jpg",
+                buttons:
+                [{
+                  type: "web_url",
+                  url: "http://www.cmu.edu/africa/",
+                  title: "CMU Africa"
+                },{
+                  type: "postback",
+                  title: "Help Me Apply",
+                  payload: "payload for Help Me Apply",
+                }]
+                },{
+                title: "Bot Party",
+                subtitle: "Bots for Messenger Challenge",
+                item_url: "https://messengerchallenge.splashthat.com/",
+                image_url: "https://d24wuq6o951i2g.cloudfront.net/img/events/id/272/2724336/assets/d0c.BotforMess_Splash.png",
+                buttons:
+                [{
+                  type: "web_url",
+                  url: "https://messengerchallenge.splashthat.com/",
+                  title: "Facebook Messenger Challenge"
+                },{
+                  type: "postback",
+                  title: "Please do something for me",
+                  payload: "Payload for Please do something for me bubble",
+                }],
+                }]
+            }
+          }
+        }
+      };
+      callSendAPI(messageData);
+},
+
+
     ```
+
+5. Re-deploy your Bot (Git add, commit, and push to Heroku again).
+
+https://developers.facebook.com/docs/messenger-platform/send-api-reference/templates
 
 ### *Act on what the user messages*
 
 What happens when the user clicks on a message button or card though? Let's update the webhook API one more time to send back a postback function.
 
-```javascript  
-  app.post('/webhook/', function (req, res) {
-    let messaging_events = req.body.entry[0].messaging
-    for (let i = 0; i < messaging_events.length; i++) {
-      let event = req.body.entry[0].messaging[i]
-      let sender = event.sender.id
-      if (event.message && event.message.text) {
-  	    let text = event.message.text
-  	    if (text === 'Generic') {
-  		    sendGenericMessage(sender)
-  		    continue
-  	    }
-  	    sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
-      }
-      if (event.postback) {
-  	    let text = JSON.stringify(event.postback)
-  	    sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
-  	    continue
-      }
-    }
-    res.sendStatus(200)
-  })
-```
+    ```javascript
+payload
+    ```
 
 Git add, commit, and push to Heroku again.
 

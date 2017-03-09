@@ -82,7 +82,7 @@ app.post('/webhook', function (req, res)
             else  if (event.read)
               console.log("Bot received message-was-read event");
             else  if (event.postback)
-                doPostback(event);
+              functs.doPostback(event);
             else
               console.log("Bot received unknown EVENT: ");
           });

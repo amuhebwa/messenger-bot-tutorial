@@ -70,15 +70,16 @@ processMessageWithAttachements: function(senderId, messageText, messageAttacment
     console.log("Stub: process the message and attachments and send a response")
 },
 
+sendGenericMessage: function(toId)
+{
+  console.log("Stub: send generic (templated) message");
+}
+
 doPostback: function(event)
 {
   console.log("Stub: process the postback");
 },
 
-sendGenericMessage: function(toId)
-{
-  console.log("Stub: send generic (templated) message");
-}
 };
 
 function callSendAPI(messageData)
