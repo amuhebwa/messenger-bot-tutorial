@@ -75,10 +75,54 @@ Now that Facebook and Heroku can talk to each other we can start coding the Bot.
 
 2. Next, replace index.js with index.js.v3 which has the start of code for our Bot to handle these requests.
 
-3. This code adds the POST request handler to simply log the incoming messages. Note: once you deploy this, your Page's messenger will be broken (temporarily). 
+3. This code adds the POST request handler to simply log the incoming messages. 
 
     ```javascript
-    show some code here
+    // Process Facebook Messenger Requests
+
+app.post('/webhook', function (req, res)
+{
+    var data = req.body;
+
+    // Make sure this is a page subscription
+    if (data.object === 'page')
+    {
+        // Iterate over each entry - there may be multiple if batched
+        data.entry.forEach(function(entry)
+        {
+        var pageID = entry.id;
+        var timestamp = entry.time;
+
+        // Iterate over each messaging event
+        entry.messaging.forEach(function(event)
+        {
+            if (event.message)
+           {
+                if (event.message.is_echo)
+                      console.log("Bot received message written event");
+                else
+                      console.log("Bot received message");
+            }
+            else  if (event.delivery)
+              console.log("Bot received delivery event");
+            else  if (event.read)
+              console.log("Bot received message-was-read event");
+            else  if (event.postback)
+                doPostback(event);
+            else
+              console.log("Bot received unknown EVENT: ");
+          });
+        });
+    }
+    else
+    {
+      console.log("Bot received unknown OBJECT (not page): ", data.object);
+    }
+
+    // All good, sent response status 200
+
+    res.sendStatus(200)
+});
     ```
 
 4. Commit the code again and push to Heroku
