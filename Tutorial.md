@@ -300,14 +300,14 @@ Facebook Messenger can send messages structured as cards or buttons.
 
 ### *Act on what the user messages*
 
-1. What happens when the user clicks on a message button or card? It sends the payload to the Bot. Give it a try.
+1. What happens when the user clicks on a message button or card? It sends the *payload* to the Bot. Give it a try.
 
 2. Click on Help Me Apply and watch your log. You will see this:
     ```
     Stub: process the postback
     ```
 
-3. Next, let's update the Bot code to process the postback. Your bot will receive the payload assocaited with the button, and can decide how to process it. For now we will just echo it to the User.
+3. Next, let's update the Bot code to process the postback. Your bot will receive the payload associated with the button, and can decide how to process it. For now we will just echo it to the User.
 
     Replace this:
     ```javascript
@@ -364,6 +364,3 @@ Read about all things chat bots with the ChatBots Magazine [here](https://medium
 
 You can also design Messenger bots in Sketch with the [Bots UI Kit](https://bots.mockuuups.com)!
 
-## How I can help
-
-I build and design bots all day. Email me for help!
