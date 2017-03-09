@@ -227,7 +227,7 @@ Facebook Messenger can send messages structured as cards or buttons.
 
 3. Next, we will write the code to send a response back as two cards.
 
-4. Copy the code below to replace genericMessage() in index.js to send a structured message back as two cards.
+4. Copy the code below to replace genericMessage() in index.js so it will send a structured message back as two cards.
 
     Replace this:
     ```javascript
@@ -294,18 +294,20 @@ Facebook Messenger can send messages structured as cards or buttons.
 
 5. Re-deploy your Bot (Git add, commit, and push to Heroku again).
 
-6. The Templates Send API reference https://developers.facebook.com/docs/messenger-platform/send-api-reference/templates is a good place to start for more details.
+6. Look through the code to see what it is doing.
+
+7. The Templates Send API reference https://developers.facebook.com/docs/messenger-platform/send-api-reference/templates is a good place to start for more details.
 
 ### *Act on what the user messages*
 
-1. What happens when the user clicks on a message button or card though? It send the payload to the Bot.
+1. What happens when the user clicks on a message button or card? It sends the payload to the Bot. Give it a try.
 
-2. First click on Help Me Apply and watch your log. You will see this:
+2. Click on Help Me Apply and watch your log. You will see this:
     ```
     Stub: process the postback
     ```
 
-3. Next, let's update the Bot code to process the postback. Your bot will receive the payload assocaited with the button, and can decide how to process it. For now we will jsut echo it to the User.
+3. Next, let's update the Bot code to process the postback. Your bot will receive the payload assocaited with the button, and can decide how to process it. For now we will just echo it to the User.
 
     Replace this:
     ```javascript
@@ -337,11 +339,10 @@ Facebook Messenger can send messages structured as cards or buttons.
     },
     ```
 
-Git add, commit, and push to Heroku again.
+5. Re-deploy your Bot (Git add, commit, and push to Heroku again).
 
-Now when you chat with the bot and type 'Generic' you can see this.
+6. Look through the code to see what it is doing.
 
-   ![Alt text](/demo/shot6.jpg)
 
 ## 📡 How to share your bot
 
