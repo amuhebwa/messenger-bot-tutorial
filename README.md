@@ -37,7 +37,7 @@ You can use https://m.me/<PAGE_USERNAME> to have someone start a chat.
 
 ## 💡 What Else?
 
-### Here are some references for Carousel Ads and other Ads:
+### Here are some references for Carousel Ads and Ad Guidelines from Facebook:
 
     https://designschool.canva.com/blog/snatch-competitive-advantage-facebook-instagram-carousel-ads/?utm_campaign=Retention%3A%20CanvaDrip%3A%20Instagram3
 
