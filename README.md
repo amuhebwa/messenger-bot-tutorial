@@ -49,8 +49,11 @@ You can use https://m.me/<PAGE_USERNAME> to have someone start a chat.
 
 You can learn how to get your bot approved for public use [here](https://developers.facebook.com/docs/messenger-platform/app-review).
 
+You can go through the tutorial from **facebot**: m.me/thefacebot. It uses a secure-tunnel and Ngrok to run locally instead of a hosted Web App. Starting at Step 8 it shows an example Bot using PHP.
+
 Read about all things chat bots with the ChatBots Magazine [here](https://medium.com/chat-bots)
 
 You can also design Messenger bots in Sketch with the [Bots UI Kit](https://bots.mockuuups.com)!
 
 Check out [ChatFuel](https://chatfuel.com/) to build a Facebook Bot without coding.
+
