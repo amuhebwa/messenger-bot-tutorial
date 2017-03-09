@@ -264,7 +264,7 @@ Facebook Messenger can send messages structured as cards or buttons.
                 },{
                   type: "postback",
                   title: "Help Me Apply",
-                  payload: "payload for Help Me Apply",
+                  payload: "help me apply",
                 }]
                 },{
                 title: "Bot Party",
@@ -305,7 +305,7 @@ Facebook Messenger can send messages structured as cards or buttons.
     Stub: process the postback
     ```
 
-3. Next, let's update the Bot code to process the postback. Your bot will receive the payload assocaited wiht the button, and can decide how to process it.
+3. Next, let's update the Bot code to process the postback. Your bot will receive the payload assocaited with the button, and can decide how to process it. For now we will jsut echo it to the User.
 
     Replace this:
     ```javascript
@@ -325,6 +325,7 @@ Facebook Messenger can send messages structured as cards or buttons.
       // The 'payload' param is a developer-defined field which is set in a postback
       // button for Structured Messages.
       var payload = event.postback.payload;
+      var myResponse = payload.replace("me", "you");
 
       console.log("Received postback for user %d and page %d with payload '%s' " +
         "at %d", senderID, recipientID, payload, timeOfPostback);
@@ -332,8 +333,8 @@ Facebook Messenger can send messages structured as cards or buttons.
       // When a postback is called, we'll send a message back to the sender to
       // let them know it was successful
 
-      this.sendTextMessage(senderID, "I will gladly handle " + payload);
-},
+      this.sendTextMessage(senderID, "I will gladly " + myResponse);
+    },
     ```
 
 Git add, commit, and push to Heroku again.
