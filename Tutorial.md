@@ -45,9 +45,9 @@ If you have not already done so, please finish the setup outlined in the [PrePar
 
 2. Create a new Facebook App: https://developers.facebook.com/apps/. Make it a Messenger App.
 
-3. Note: If you are not already a Facebook Developer, you will need to become one.
+    Note: If you are not already a Facebook Developer, you will need to become one.
 
-4. In the App, go to Messenger tab, and under Settings, scroll down and click Setup Webhook.  First, put in the URI of your Heroku server.  Be sure to add /webhook to the end of your Server URI. Go ahead and check all the subscription fields. 
+3. In the App, go to Messenger tab, and under Settings, scroll down and click Setup Webhook.  First, put in the URI of your Heroku server.  Be sure to add /webhook to the end of your Server URI. Go ahead and check all the subscription fields. 
 
     ![Alt text](/images/WebHook.png)
 
@@ -57,7 +57,7 @@ If you have not already done so, please finish the setup outlined in the [PrePar
 
     ![Alt text](/images/PageAccessToken.png)
 
-    It is not stored in the page, so copy/paste and save it somewhere (perhaps in a Draft email).
+    The Page Access Token is not persisted on the page, so copy/paste and save it somewhere (perhaps in a Draft email).
 
     We will use it in 2 places: once now to trigger the Facebook App to send messages to the Bot and once later for setting up access to the Facebook API for your Bot.
 
@@ -75,7 +75,7 @@ Now that Facebook and Heroku can talk to each other we can start coding the Bot.
 
 2. Next, replace index.js with index.js.v3 which has the start of code for our Bot to handle these requests.
 
-3. This code adds the POST request handler to simply log the incoming messages. 
+3. This code adds the POST request handler to simply log the incoming events and messages. 
 
     ```javascript
     // Process Facebook Messenger Requests
@@ -125,7 +125,9 @@ app.post('/webhook', function (req, res)
 });
     ```
 
-4. Commit the code again and push to Heroku
+4. Copy the functs.js file to your *myBot1* directory.
+
+5. Commit the code again and push to Heroku
 
     ```
     git add .
@@ -136,7 +138,15 @@ app.post('/webhook', function (req, res)
 
 ### *Let's get the Bot Talking*
 
-1. Next, replace index.js with index.js.v3 which has the start of code for our Bot to handle these requests.  This file has the Page Access Token in it (you will need to change it to yours).
+1. Edit your copy of functs.js. This file has the Page Access Token in it  - you will need to change it to yours.
+
+    Find this line:
+
+    ```
+    const PAGE_ACCESS_TOKEN = "EAAKTalAQ2eoBEAXiFuM..."
+    ```
+
+    Copy and paste your Page Access Token between the quotes.
     
     **Optional, but recommended**: keep your app secrets out of version control!
     - On Heroku, its easy to create dynamic runtime variables (known as [config vars](https://devcenter.heroku.com/articles/config-vars)). This can be done in the Heroku dashboard UI for your app **or** from the command line:

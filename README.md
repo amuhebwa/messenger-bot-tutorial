@@ -19,7 +19,7 @@ This tutorial is based on the following tutorials:
 
 ### Download this GitHub project and unzip it into the *myBot1* directory you created in the setup.
 
-Note that the files used in Basic Tutorial will be under the messenger-bot-tutorial-master/ directory.
+Note that the files used in the Basic Tutorial will be under the messenger-bot-tutorial-master/ directory.
 
 [Basic Tutorial](https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/Tutorial.md)
 
