@@ -210,7 +210,7 @@ app.post('/webhook', function (req, res)
 ### *Start with Custom Responses*
 1. This example shows coding a simple rule - if the User send **Knock Knock**, the Bot will respond with **Who's there?**
 
-2. Hopefully you can easily see where you might hook in more complicated rule-based processing to make our Bot pretty smart at responding in an autonomous way.
+2. Hopefully you can easily see where you might hook in more complicated rule-based processing to make your Bot pretty smart at responding in an autonomous way.
 
 3. The Send API reference https://developers.facebook.com/docs/messenger-platform/send-api-reference#message is a good place to start for more details.
 
@@ -218,7 +218,7 @@ app.post('/webhook', function (req, res)
 
 Facebook Messenger can send messages structured as cards or buttons. 
 
-1. In the functs.js, you will see a stub called sendGenericMessage(). This is called when the User types the word structured (see line 33 in functs.js).
+1. In the functs.js file, you will see a stub called *sendGenericMessage()*. This is called when the User types the word structured (see line 33 in functs.js).
 
 2. Try typing it in your Messenger window and you will see this:
     ```
@@ -227,7 +227,7 @@ Facebook Messenger can send messages structured as cards or buttons.
 
 3. Next, we will write the code to send a response back as two cards.
 
-4. Copy the code below to replace genericMessage() in index.js to send a test message back as two cards.
+4. Copy the code below to replace genericMessage() in index.js to send a structured message back as two cards.
 
     Replace this:
     ```javascript
@@ -294,14 +294,46 @@ Facebook Messenger can send messages structured as cards or buttons.
 
 5. Re-deploy your Bot (Git add, commit, and push to Heroku again).
 
-https://developers.facebook.com/docs/messenger-platform/send-api-reference/templates
+6. The Templates Send API reference https://developers.facebook.com/docs/messenger-platform/send-api-reference/templates is a good place to start for more details.
 
 ### *Act on what the user messages*
 
-What happens when the user clicks on a message button or card though? Let's update the webhook API one more time to send back a postback function.
+1. What happens when the user clicks on a message button or card though? It send the payload to the Bot.
 
+2. First click on Help Me Apply and watch your log. You will see this:
+    ```
+    Stub: process the postback
+    ```
+
+3. Next, let's update the Bot code to process the postback. Your bot will receive the payload assocaited wiht the button, and can decide how to process it.
+
+    Replace this:
     ```javascript
-payload
+    doPostback: function(event)
+    {
+      console.log("Stub: process the postback");
+    },
+    ```
+    with this code:
+    ```javascript
+    doPostback: function(event)
+    {
+      var senderID = event.sender.id;
+      var recipientID = event.recipient.id;
+      var timeOfPostback = event.timestamp;
+
+      // The 'payload' param is a developer-defined field which is set in a postback
+      // button for Structured Messages.
+      var payload = event.postback.payload;
+
+      console.log("Received postback for user %d and page %d with payload '%s' " +
+        "at %d", senderID, recipientID, payload, timeOfPostback);
+
+      // When a postback is called, we'll send a message back to the sender to
+      // let them know it was successful
+
+      this.sendTextMessage(senderID, "I will gladly handle " + payload);
+},
     ```
 
 Git add, commit, and push to Heroku again.
