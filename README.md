@@ -11,9 +11,6 @@ This tutorial is based on the following tutorials:
 
 [PreParty.md](https://github.com/amuhebwa/messenger-bot-tutorial/blob/master/PreParty.md)
 
-----------------------------------------------
-## In-Progress, please Ignore the rest
-----------------------------------------------
 
 ## 🙌  Let's Bot Party 
 
